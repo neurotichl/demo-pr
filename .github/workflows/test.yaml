@@ -6,12 +6,15 @@ on:
       first:
         type: boolean
         description: haha
+        default: 'true'
       second:
         type: boolean
         description: hehe
+        default: 'true'
       third:
         type: boolean
         description: hoho
+        default: 'true'
         
 jobs:
  build-deploy:
