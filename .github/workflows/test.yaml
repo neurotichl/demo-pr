@@ -1,0 +1,31 @@
+name: Test select
+
+on:
+  workflow_dispatch:
+    inputs:
+      first:
+        type: boolean
+        description: haha
+      second:
+        type: boolean
+        description: hehe
+      third:
+        type: boolean
+        description: hoho
+        
+jobs:
+ build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Print haha"
+        if: github.event.inputs.first == 'true'
+        run: echo "haha"
+        
+      - name: "Print hehe"
+        if: github.event.inputs.second == 'true'
+        run: echo "hehe"
+        
+      - name: "Print hoho"
+        if: github.event.inputs.third == 'true'
+        run: echo "hoho"
+        
